@@ -1,0 +1,2 @@
+# atom-bash
+bash snippets
