@@ -1,0 +1,20 @@
+{
+  "name": "atom-bash",
+  "version": "0.0.0",
+  "description": "bash snippets >> Snippet >> atom-bash by @code4mk & 0devco",
+  "keywords": [
+    "bash",
+    "snippet",
+    "code4mk",
+    "0devco"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code4mk/atom-bash"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
+}

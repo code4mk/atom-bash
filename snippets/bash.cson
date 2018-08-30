@@ -1,0 +1,188 @@
+'.source.shell':
+
+  'comment -> bash':
+    'prefix': 's-comment',
+    'body': """
+    # This is bash comment
+    """
+  'var set -> bash':
+    'prefix': 's-var',
+    'body': """
+    var_name=$1
+    """
+  'var local set -> bash':
+    'prefix': 's-varlocal',
+    'body': """
+    local var_name=$1
+    """
+  'var global set -> bash':
+    'prefix': 's-varglobal',
+    'body': """
+    export var_name=$1
+    """
+  'var get -> bash':
+    'prefix': 's-varget',
+    'body': """
+    $var_name
+    """
+  'var delete -> bash':
+    'prefix': 's-vardelete',
+    'body': """
+    del var_name
+    """
+
+  'arithmatic -> bash':
+    'prefix': 's-math',
+    'body': """
+    $(( $1 ))
+    """
+
+  'array set -> bash':
+    'prefix': 's-arrayset',
+    'body': """
+    array_list=(a1 a2)
+    """
+
+  'array get -> bash':
+    'prefix': 's-arrayget',
+    'body': """
+    ${array_list[$1]}
+    """
+  'array slice -> bash':
+    'prefix': 's-arrayslice',
+    'body': """
+    ${array_list[$1]:0:3}
+    """
+  'array delete -> bash':
+    'prefix': 's-arraydelete',
+    'body': """
+    unset array_list[$1]
+    """
+
+  'condition part [] -> bash':
+    'prefix': 's-condition-part',
+    'body': """
+    [ $1 ]
+    """
+  'equal -> bash':
+    'prefix': 'sc-eq',
+    'body': """
+    -eq $1
+    """
+  'not equal -> bash':
+    'prefix': 'sc-ne',
+    'body': """
+    -ne $1
+    """
+  'less than -> bash':
+    'prefix': 'sc-lt',
+    'body': """
+    -lt $1
+    """
+  'less than equal -> bash':
+    'prefix': 'sc-le',
+    'body': """
+    -le $1
+    """
+  'greater than -> bash':
+    'prefix': 'sc-gt',
+    'body': """
+    -gt $1
+    """
+  'greater than equal -> bash':
+    'prefix': 'sc-ge',
+    'body': """
+    -ge $1
+    """
+  'if -> bash':
+    'prefix': 's-if',
+    'body': """
+    if [ $1 ]; then
+      # code
+    fi
+    """
+  'if -> else -> bash':
+    'prefix': 's-if2',
+    'body': """
+    if [ $1 ]; then
+      # code
+    else
+      # code
+    fi
+    """
+  'else if -> bash':
+    'prefix': 's-if2',
+    'body': """
+    if [ $1 ]; then
+      # code
+    elif [ $1 ]; then
+      # code
+    else
+      # code
+    fi
+    """
+
+  'switch -> bash':
+    'prefix': 's-switch',
+    'body': """
+    case condition$1 in
+      check)
+        #code
+      ;;
+      *)
+        #code
+      ;;
+    esac
+    """
+  'case -> bash':
+    'prefix': 's-case',
+    'body': """
+    check)
+      #code
+    ;;
+    """
+  'for in -> bash':
+    'prefix': 's-forin',
+    'body': """
+    for i in $1; do
+      #code
+    done
+    """
+  'for -> bash':
+    'prefix': 's-for',
+    'body': """
+    for (( i ; i < $n ; i++ )); do
+      #code
+    done
+    """
+  'while -> bash':
+    'prefix': 's-while',
+    'body': """
+    while [ condition ]; do
+      #statements
+    done
+    """
+  'until -> bash':
+    'prefix': 's-until',
+    'body': """
+    until [ condition ]; do
+      #statements
+    done
+    """
+
+
+  'pipe -> bash':
+    'prefix': 's-pipe',
+    'body': """
+    | $1
+    """
+  'and -> bash':
+    'prefix': 's-and',
+    'body': """
+    && $1
+    """
+  'or -> bash':
+    'prefix': 's-or',
+    'body': """
+    || $1
+    """
