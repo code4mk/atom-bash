@@ -16,7 +16,12 @@
     sudo apt-get remove name$1
     """
   'apt-get autoremove  -> linux':
-    'prefix': 'apt-remove',
+    'prefix': 'apt-autoremove',
     'body': """
-    sudo apt-get autoremove name$1
+    sudo apt-get autoremove
+    """
+  'apt-get upgrade  -> linux':
+    'prefix': 'apt-upgrade',
+    'body': """
+    sudo apt-get upgrade name$1
     """
