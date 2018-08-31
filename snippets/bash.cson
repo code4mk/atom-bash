@@ -111,7 +111,7 @@
     fi
     """
   'else if -> bash':
-    'prefix': 's-if2',
+    'prefix': 's-if3',
     'body': """
     if [ $1 ]; then
       # code
@@ -120,6 +120,13 @@
     else
       # code
     fi
+    """
+
+  'else if el-> bash':
+    'prefix': 's-elseif',
+    'body': """
+    elif [ $1 ]; then
+      # code
     """
 
   'switch -> bash':
