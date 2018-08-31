@@ -1,0 +1,22 @@
+'.source.shell':
+
+  'apt-get install -> linux':
+    'prefix': 'apt-install',
+    'body': """
+    sudo apt-get install name$1
+    """
+  'apt-get update  -> linux':
+    'prefix': 'apt-update',
+    'body': """
+    sudo apt-get update
+    """
+  'apt-get remove  -> linux':
+    'prefix': 'apt-remove',
+    'body': """
+    sudo apt-get remove name$1
+    """
+  'apt-get autoremove  -> linux':
+    'prefix': 'apt-remove',
+    'body': """
+    sudo apt-get autoremove name$1
+    """

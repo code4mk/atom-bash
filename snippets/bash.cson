@@ -5,6 +5,26 @@
     'body': """
     # This is bash comment
     """
+  's-bash  -> bash':
+    'prefix': 's-bash',
+    'body': """
+    #!/usr/bin/env bash
+    """
+  's-echo  -> bash':
+    'prefix': 's-echo',
+    'body': """
+    echo $1
+    """
+  's-printf  -> bash':
+    'prefix': 's-printf',
+    'body': """
+    printf $1
+    """
+  's-read  -> bash':
+    'prefix': 's-read',
+    'body': """
+    read -p "your Q?"qs
+    """
   'var set -> bash':
     'prefix': 's-var',
     'body': """
@@ -192,4 +212,70 @@
     'prefix': 's-or',
     'body': """
     || $1
+    """
+  'not -> bash':
+    'prefix': 's-not',
+    'body': """
+    ! $1
+    """
+  'continue -> bash':
+    'prefix': 's-continue',
+    'body': """
+    continue
+    """
+  'break -> bash':
+    'prefix': 's-break',
+    'body': """
+    break
+    """
+
+  'function -> bash':
+    'prefix': 's-function',
+    'body': """
+    user() {
+      #code
+    }
+    """
+
+  'sleep -> bash':
+    'prefix': 's-sleep',
+    'body': """
+    sleep $1
+    """
+
+  '-e exist file -> bash file':
+    'prefix': 'sf-e',
+    'body': """
+    -e $1
+    """
+  '-d exist directory -> bash file':
+    'prefix': 'sf-d',
+    'body': """
+    -d $1
+    """
+  '-f exist file & regular -> bash file':
+    'prefix': 'sf-f',
+    'body': """
+    -f $1
+    """
+  '-r read -> bash file':
+    'prefix': 'sf-r',
+    'body': """
+    -r $1
+    """
+  '-w write -> bash file':
+    'prefix': 'sf-w',
+    'body': """
+    -w $1
+    """
+  '-x execute -> bash file':
+    'prefix': 'sf-x',
+    'body': """
+    -x $1
+    """
+
+  'export -> bash':
+    'prefix': 's-export',
+    'body': """
+    export PATH=file$1:$PATH
     """
