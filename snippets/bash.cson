@@ -23,7 +23,7 @@
   's-read  -> bash':
     'prefix': 's-read',
     'body': """
-    read -p "your Q?"qs
+    read -p "your number `echo $'\n>> '`"
     """
   'var set -> bash':
     'prefix': 's-var',
@@ -67,6 +67,11 @@
     'prefix': 's-arrayget',
     'body': """
     ${array_list[$1]}
+    """
+  'array size -> bash':
+    'prefix': 's-arrsize',
+    'body': """
+    ${#array_list$1}
     """
   'array slice -> bash':
     'prefix': 's-arrayslice',
@@ -278,4 +283,15 @@
     'prefix': 's-export',
     'body': """
     export PATH=file$1:$PATH
+    """
+
+  'alias -> bash':
+    'prefix': 's-alias',
+    'body': """
+    alias me='$1'
+    """
+  'eval -> bash':
+    'prefix': 's-eval',
+    'body': """
+    eval $1
     """
