@@ -295,3 +295,13 @@
     'body': """
     eval $1
     """
+  'exit 0 -> bash':
+    'prefix': 's-exit0',
+    'body': """
+    exit 0
+    """
+  'exit 1 -> bash':
+    'prefix': 's-exit1',
+    'body': """
+    exit 1
+    """
