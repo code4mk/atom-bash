@@ -23,7 +23,7 @@
   's-read  -> bash':
     'prefix': 's-read',
     'body': """
-    read -p "your number `echo $'\n>> '`"
+    read -p "your number `echo $'\\n>> '`"
     """
   'var set -> bash':
     'prefix': 's-var',
