@@ -183,7 +183,7 @@
   'for -> bash':
     'prefix': 's-for',
     'body': """
-    for (( i ; i < $n ; i++ )); do
+    for (( i=0 ; i < $n ; i++ )); do
       #code
     done
     """
