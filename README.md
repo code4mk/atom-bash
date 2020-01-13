@@ -9,7 +9,7 @@ Install:
 apm install atom-bash
 ```
 
-Mian Features:
+Main Features:
 
   - Snippet Bash
 
